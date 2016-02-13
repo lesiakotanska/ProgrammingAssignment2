@@ -1,3 +1,6 @@
+## This function is like the one given in the example. It caches a matrix and has four methods, set, get, setmean and getmean. 
+## The last two will be used by the cacheSolve function.
+
 makeCacheMatrix<- function(x = as.matrix) { 
 inv <- NULL 
 set <- function(y) { 
@@ -13,6 +16,8 @@ list(set = set, get = get,
     setinverse = setinverse, 
     getinverse = getinverse) 
 }
+
+## We use the solve function to get the inverse of the given matrix.
 
 cacheSolve <- function(x, ...) { 
 inv<-x$getinverse() 
