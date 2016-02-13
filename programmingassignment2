@@ -1,4 +1,4 @@
-makecachematrix<- function(x = as.matrix) { 
+makeCacheMatrix<- function(x = as.matrix) { 
 inv <- NULL 
 set <- function(y) { 
   x <<- y 
@@ -14,7 +14,7 @@ list(set = set, get = get,
     getinverse = getinverse) 
 }
 
-cachemean <- function(x, ...) { 
+cacheSolce <- function(x, ...) { 
 inv<-x$getinverse() 
 if(!is.null(inv)) { 
     message("getting cached data") 
